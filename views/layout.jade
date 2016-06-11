@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto|Sigmar+One|Anonymous+Pro')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    a(href="#").fa.fa-bars.sidemenu-btn
+    #logo
+      a(href="/") <b>Bro</b>mberMan<i>!</i>
+    #sidemenu
+      nav
+        ul
+          li.home
+            a(href='home') Home
+          li.game
+            a(href='game') Game
+          li.settings
+            a(href='settings') Settings
+          li.manual
+            a(href='manual') Manual
+    section#home
+      .container
+        h1 Home
+    section#game
+      #bottom-bar
+        #current-unit-stats.clearfix
+          #bombs
+            span
+      aside
+      #map-display.clearfix
+    section#settings
+      .container
+        h1 Settings
+    section#manual
+      .container
+        h1 Manual
+
+    
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+    script(src='/js/main.js')
+    footer
+      span Sentyurin &copy; 2016

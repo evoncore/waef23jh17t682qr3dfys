@@ -1,0 +1,256 @@
+
+
+@import 'var.sass'
+@import 'reset.sass'
+
+*
+  padding: 0
+  margin: 0
+  outline: none
+  user-select: none
+
+html, body
+  height: 100%
+
+::selection
+  background-color: $mc
+
+::-moz-selection
+  background-color: $mc
+
+body
+  background-color: #202020
+  overflow: hidden
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+nav:hover
+  cursor: default
+
+
+.container-fluid
+  max-width: 98%
+
+section
+  position: absolute
+  top: 50%
+  right: 0
+  width: 100%
+  transform: translate(0, -50%)
+  opacity: 0
+  width: 85%
+  display: none
+  margin-top: 20px
+
+
+/*=== HEADER ===*/
+
+#sidemenu
+  background-color: #222
+  position: absolute
+  left: 0
+  height: 100%
+  z-index: 999
+  top: 0
+  padding: 50px 0
+  box-shadow: 0 0 2px rgba(0,0,0,.1)
+  width: 15%
+  // min-width: 230px
+  nav
+    text-align: left
+    li
+      display: block
+      margin: 0px 20px
+      margin-left: 20px
+      position: relative
+      padding-right: 20px
+      &:before
+        display: inline-block
+        content: ''
+        color: #fff
+        font-family: FontAwesome
+        position: absolute
+        left: 0px
+        top: 13px
+        font-size: 25px
+        transition: .2s
+      &.home:before
+        content: '\f015'
+      &.game:before
+        content: '\f11b'
+      &.settings:before
+        content: '\f013'
+      &.manual:before
+        content: '\f02d'
+      &:hover::before
+        left: -4px
+      &:hover
+        cursor: pointer
+      &:hover > a
+        color: $mc
+        border-left: 2px solid $mc
+    a
+      display: inline-block
+      padding: 20px 20px
+      color: #fff
+      transition: $mt
+      font: 600 18px $mf, $af
+      letter-spacing: 2px
+      margin-left: 45px
+      border-left: 2px solid #F0F0F0
+    .active
+      color: $mc
+      border-left: 2px solid $mc
+
+  #settings
+    text-align: center
+    padding: 19px 0
+    a
+      display: inline-block
+      color: #fff
+      font-size: 24px
+      transition: .4s
+      margin-top: 2px
+      &:focus
+        transform: rotate(-60deg)
+        color: $mc
+
+.sidemenu-btn
+  display: block
+  margin: 15px 0
+  margin-left: 20%
+  color: #fff
+  font-size: 34px
+  transition: $mt
+  float: left
+  &:active, &:focus, &:hover
+    color: #fff
+  &.hidde
+    color: $mc
+
+#logo
+  display: block
+  text-align: center
+  padding: 13px 0
+  float: left
+  margin-left: 20px
+  a
+    color: #fff
+    font: 24px 'Sigmar One', $af
+  i
+    font-style: normal
+    color: $mc
+  b
+    font-weight: 400
+    color: $mc
+
+
+/*=== MAP ===*/
+
+#map-display
+  min-width: 1009px
+  max-width: 1009px
+  max-height: 768px
+  // border-right: 1px solid rgba(255,255,255,.2)
+  // background-color: rgba(255,255,255,.3)
+  position: relative
+  user-select: none
+  margin: 0 auto
+  &:hover
+    cursor: default
+  .player
+    width: 47px
+    height: 47px
+    margin-left: -1px
+    position: absolute
+    box-sizing: border-box
+    top: 13px
+    left: 13px
+    z-index: 3
+    margin-top: -12px
+    margin-left: -13px
+    border: 2px solid transparent
+    // transition: .2s
+    &:after
+      display: block
+      content: ''
+      background-color: $mc
+      position: absolute
+      height: 23px
+      width: 23px
+      top: 9.5px
+      left: 10px
+
+  .bomb
+    width: 22px
+    height: 22px
+    border-radius: 50%
+    background-color: #131313
+    position: absolute
+    margin-top: 1px
+    z-index: 2
+    box-shadow: 0 0 5px rgba(0,0,0,.5)
+    &:before
+      content: ''
+      display: block
+      background-color: rgb(222, 60, 38)
+      height: 10px
+      width: 2px
+      border-radius: 50%
+      position: absolute
+      left: 50%
+      top: -3px
+      margin-left: -1px
+      z-index: 1
+  .map-tile
+    height: 48px
+    width: 48px
+    box-sizing: border-box
+    float: left
+    background-color: rgba(255,255,255,.5)
+    border-right: 1px solid rgba(255,255,255,.2)
+    border-top: 1px solid rgba(255,255,255,.2)
+    padding: 14px
+  .wall
+    height: 47px
+    width: 47px
+    margin-top: 1px
+    box-shadow: 0 0 5px rgba(0,0,0,.7)
+    box-sizing: border-box
+    position: absolute
+    background-color: #202020
+    margin-top: -12px
+    margin-left: -13px
+
+#bottom-bar
+  background-color: rgba(0,0,0,.4)
+  box-shadow: -2px 0px 4px rgba(0,0,0,.4)
+  color: #fff
+  padding: 40px 15px
+  width: 100%
+  padding-left: 16%
+  &:hover
+    cursor: default
+  #current-unit-stats
+    user-select: none
+    #bombs
+      color: $mc
+      font-family: $sf, $af
+      font-weight: 600
+      font-size: 18px
+      margin: 0 15px
+      float: left
+
+
+/*=== FOOTER ===*/
+
+footer
+  position: absolute
+  bottom: 0
+  padding: 10px 0
+  width: 100%
+  text-align: center
+  background-color: rgba(0,0,0,.4)
+  color: #fff
+
+@import 'js-classes.sass'
