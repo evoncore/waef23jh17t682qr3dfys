@@ -33,14 +33,13 @@ nav:hover
 
 section
   position: absolute
-  top: 50%
   right: 0
   width: 100%
-  transform: translate(0, -50%)
   opacity: 0
   width: 85%
   display: none
   margin-top: 20px
+  top: 18%
 
 
 /*=== HEADER ===*/
@@ -102,19 +101,6 @@ section
       color: $mc
       border-left: 2px solid $mc
 
-  #settings
-    text-align: center
-    padding: 19px 0
-    a
-      display: inline-block
-      color: #fff
-      font-size: 24px
-      transition: .4s
-      margin-top: 2px
-      &:focus
-        transform: rotate(-60deg)
-        color: $mc
-
 .sidemenu-btn
   display: block
   margin: 15px 0
@@ -133,7 +119,7 @@ section
   text-align: center
   padding: 13px 0
   float: left
-  margin-left: 20px
+  margin-left: 50px
   a
     color: #fff
     font: 24px 'Sigmar One', $af
@@ -208,8 +194,6 @@ section
     box-sizing: border-box
     float: left
     background-color: rgba(255,255,255,.5)
-    border-right: 1px solid rgba(255,255,255,.2)
-    border-top: 1px solid rgba(255,255,255,.2)
     padding: 14px
   .wall
     height: 47px
@@ -224,7 +208,7 @@ section
 
 #bottom-bar
   background-color: rgba(0,0,0,.4)
-  box-shadow: -2px 0px 4px rgba(0,0,0,.4)
+  box-shadow: 0 0 5px rgba(0,0,0,.4)
   color: #fff
   padding: 40px 15px
   width: 100%
@@ -240,6 +224,55 @@ section
       font-size: 18px
       margin: 0 15px
       float: left
+
+
+/*=== SETTINGS ===*/
+
+#settings
+  ul 
+    float: left
+    display: block
+    margin-top: 50px
+    li
+      color: #fff
+      font: 20px $mf, $af
+      letter-spacing: 1px
+      background-color: rgba(0,0,0,.4)
+      padding: 15px 20px
+      box-shadow: 0 0 5px rgba(0,0,0,.4)
+      margin-top: 20px
+      text-align: right
+      &:first-child
+        margin-top: 0
+      a
+        display: inline-block
+        height: 23px
+        width: 42px
+        margin-left: 20px
+        vertical-align: -4px
+        border: 2px solid $sc
+        background-color: $sc / 4
+        border-radius: 12px
+        box-sizing: border-box
+        position: relative
+        & > *  
+          cursor: pointer
+        i
+          display: block
+          position: absolute
+          content: ''
+          height: 17px
+          width: 17px
+          box-sizing: border-box
+          background-color: $sc
+          top: 1px
+          left: 1px
+          border-radius: 50%
+    .on
+      border: 2px solid $mc
+      background-color: $mc / 4 
+      i
+        background-color: $mc
 
 
 /*=== FOOTER ===*/
