@@ -1,2 +1,2 @@
-public/sass/
-public/js/main.js
+public/sass/*
+!public/js/main.js
