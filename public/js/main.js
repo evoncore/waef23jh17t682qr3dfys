@@ -26,8 +26,8 @@ $(document).ready(function() {
 
   // Navigation
 
-  $('section#settings').css({display: 'block'}).stop().animate({opacity: 1}, 300);
-  $('#sidemenu nav li.settings a').addClass('active');
+  $('section#game').css({display: 'block'}).stop().animate({opacity: 1}, 300);
+  $('#sidemenu nav li.game a').addClass('active');
 
   $('#sidemenu nav a').on('click', function(e) {
     e.preventDefault();
