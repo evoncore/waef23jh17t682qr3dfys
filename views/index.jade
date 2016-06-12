@@ -5,7 +5,7 @@ html
     meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto|Sigmar+One|Anonymous+Pro')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:400,700|Sigmar+One|Arvo')
     link(rel='stylesheet', href='/css/style.css')
   body
     .clearfix
@@ -21,6 +21,8 @@ html
             a(href='game') Game
           li.settings
             a(href='settings') Settings
+          li.map-editor
+            a(href='map-editor') Map Editor
           li.manual
             a(href='manual') Manual
             
@@ -44,6 +46,28 @@ html
           li Some
             a(href='#').off
               i
+        .stand.clearfix
+          .map-tile
+          .map-tile
+          .map-tile
+          .map-tile
+          .map-tile
+          .map-tile
+            .wall
+          .map-tile
+          .map-tile
+          .map-tile
+          .map-tile
+          .map-tile
+          .map-tile
+            .player
+          .map-tile
+          .map-tile
+          .map-tile
+          .map-tile
+    section#map-editor
+      .container
+        h1 Map Editor
     section#manual
       .container
         h1 Manual

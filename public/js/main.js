@@ -26,8 +26,8 @@ $(document).ready(function() {
 
   // Navigation
 
-  $('section#game').css({display: 'block'}).stop().animate({opacity: 1}, 300);
-  $('#sidemenu nav li.game a').addClass('active');
+  $('section#settings').css({display: 'block'}).stop().animate({opacity: 1}, 300);
+  $('#sidemenu nav li.settings a').addClass('active');
 
   $('#sidemenu nav a').on('click', function(e) {
     e.preventDefault();
@@ -372,11 +372,10 @@ $(document).ready(function() {
 
   $("#settings li a.grid").on('click', function() {
     if ($(this).hasClass('off')) {
-      $('#map-display .map-tile').css({
-        borderRight: '1px solid rgba(255,255,255,.2)',
-        borderTop: '1px solid rgba(255,255,255,.2)'
-      });
+      $('#map-display .map-tile').removeClass('grid-off').addClass('grid');
+      $('#settings .map-tile').removeClass('grid-off').addClass('grid');
     } else {
-      $('#map-display .map-tile').css({border: 0});
+      $('#map-display .map-tile').removeClass('grid').addClass('grid-off');
+      $('#settings .map-tile').removeClass('grid').addClass('grid-off');
     }
   });
