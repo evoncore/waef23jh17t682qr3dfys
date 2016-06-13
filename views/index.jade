@@ -11,7 +11,7 @@ html
     .clearfix
       a(href="#").fa.fa-bars.sidemenu-btn
       #logo
-        a(href="/") <b>Bro</b>mberMan<i>!</i>
+        a(href="/") <b>Bomber</b>Man<i>!</i>
     #sidemenu
       nav
         ul
@@ -42,6 +42,15 @@ html
         ul
           li Grid
             a(href='#').off.grid
+              i
+          li Material
+            a(href='#').off
+              i
+          li Some
+            a(href='#').off
+              i
+          li Some
+            a(href='#').off
               i
           li Some
             a(href='#').off
@@ -74,6 +83,7 @@ html
 
     
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
-    script(src='/js/main-dist.js')
+    script(src='https://cdn.socket.io/socket.io-1.4.5.js')
+    script(src='/js/main.js')
     footer
       span Sentyurin &copy; 2016
